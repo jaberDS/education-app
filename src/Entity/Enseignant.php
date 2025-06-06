@@ -69,12 +69,11 @@ class Enseignant
         return $this->cin;
     }
 
-    public function setCin(int $cin): static
-    {
-        $this->cin = $cin;
-
-        return $this;
-    }
+    public function setCin(int $cin): self // <-- Must be "int"
+{
+    $this->cin = $cin;
+    return $this;
+}
 
     /**
      * @return Collection<int, Module>
