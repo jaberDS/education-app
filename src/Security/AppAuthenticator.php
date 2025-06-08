@@ -44,13 +44,13 @@ class AppAuthenticator extends AbstractLoginFormAuthenticator
 
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, string $firewallName): ?Response
     {
+        // 1. Try to redirect to the target path if it exists
         if ($targetPath = $this->getTargetPath($request->getSession(), $firewallName)) {
             return new RedirectResponse($targetPath);
         }
 
-        // For example:
-        return new RedirectResponse($this->urlGenerator->generate('dashbord'));
-        throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
+        // Redirect to admin dashboard after successful login
+        return new RedirectResponse($this->urlGenerator->generate('admin_dashboard'));
     }
 
     protected function getLoginUrl(Request $request): string

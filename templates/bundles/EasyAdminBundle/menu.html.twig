@@ -1,0 +1,12 @@
+{% extends '@!EasyAdmin/menu.html.twig' %}
+
+{% block menu_dashboard %}
+    <li class="menu-item {{ ea.dashboardRouteName == 'admin_dashboard' ? 'active' }}">
+        <a class="menu-link" href="{{ path('admin_dashboard') }}">
+            <i class="menu-icon fa-fw {{ menu_item.icon|default('fa fa-home') }}"></i>
+            <span class="menu-label">{{ menu_item.label|default('Dashboard')|trans }}</span>
+        </a>
+    </li>
+{% endblock menu_dashboard %}
+
+

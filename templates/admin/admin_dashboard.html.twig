@@ -1,0 +1,46 @@
+{% extends '@EasyAdmin/page/content.html.twig' %}
+
+{% block content_title %}Dashboard{% endblock %}
+
+{% block main %}
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Welcome to the Admin Dashboard</h5>
+                    <p class="card-text">This is your administration panel where you can manage:</p>
+                    <ul>
+                        <li>Students (Etudiants)</li>
+                        <li>Sectors (Filieres)</li>
+                        <li>Teachers (Enseignants)</li>
+                        <li>Modules</li>
+                        <li>Semesters (Semestres)</li>
+                        <li>Grades (Notes)</li>
+                        <li>Users</li>
+                    </ul>
+                    <p>Use the menu on the left to navigate through different sections.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {# You can add more dashboard widgets here #}
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Quick Stats</h5>
+                    <p class="card-text">Statistics and quick information will be displayed here.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Recent Activity</h5>
+                    <p class="card-text">Recent system activities will be displayed here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %} 

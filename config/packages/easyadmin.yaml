@@ -1,0 +1,26 @@
+easy_admin:
+    # The name of the dashboard route
+    dashboard_route: admin_dashboard
+    
+    # The name of the dashboard controller
+    dashboard_controller: App\Controller\Admin\DashboardController
+    
+    # The name of the dashboard title
+    site_name: 'Gestion Exams'
+    
+    # The name of the dashboard favicon
+    favicon_path: 'build/images/favicon.png'
+    
+    # The name of the dashboard logo
+    logo_path: 'build/images/logo.png'
+    
+    # The name of the dashboard menu
+    menu:
+        - { label: 'Dashboard', icon: 'fa fa-home', route: 'admin_dashboard' }
+        - { label: 'Filiere', icon: 'fas fa-list', entity: 'App\Entity\Filiere' }
+        - { label: 'Semestre', icon: 'fas fa-list', entity: 'App\Entity\Semestre' }
+        - { label: 'Enseignant', icon: 'fas fa-list', entity: 'App\Entity\Enseignant' }
+        - { label: 'Module', icon: 'fas fa-list', entity: 'App\Entity\Module' }
+        - { label: 'Etudiant', icon: 'fas fa-list', entity: 'App\Entity\Etudiant' }
+        - { label: 'Note', icon: 'fas fa-list', entity: 'App\Entity\Note' }
+        - { label: 'User', icon: 'fas fa-list', entity: 'App\Entity\User' } 

@@ -32,7 +32,7 @@ final class EnseignantFactory extends PersistentProxyObjectFactory
     protected function defaults(): array|callable
     {
         return [
-            'cin' => self::faker()->realtext(),
+            'cin' => self::faker()->realtext(10),
             'nom' => self::faker()->lastname(),
             'prenom' => self::faker()->firstname(),
         ];
